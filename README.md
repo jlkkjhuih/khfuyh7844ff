@@ -4,6 +4,9 @@ $parsed_url = parse($url);
 $host = $parsed_url['host'];
 $path = $parsed_url['path'];
 
+if ($path == "")
+        $path = "/";
+      
 while(1)
 {
         $sock = fsockopen($host, 80);
