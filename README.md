@@ -1,4 +1,4 @@
-<?php
+
 $url = $_GET['url'];
 $parsed_url = parse($url);
 $host = $parsed_url['host'];
@@ -30,4 +30,3 @@ function parse($url){
     $info = parse_url($url);
     return $info;
 }
-?>
