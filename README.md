@@ -1,4 +1,4 @@
-
+echo 'running';
 $url = $_GET['url'];
 $parsed_url = parse($url);
 $host = $parsed_url['host'];
