@@ -9,7 +9,7 @@ if ($path == "")
       
 while(1)
 {
-        $sock = fsockopen($host, 80);
+        $sock = fsockopen($host, 443);
         $pack = "GET $path HTTP/1.1\r\n";
         $pack.= "Host: " .$host. "\r\n";
         $pack.= "User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0\r\n";
