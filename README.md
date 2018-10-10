@@ -18,6 +18,7 @@ while(1)
         $pack.= "Connection: closed\r\n\r\n";
         fputs($sock, $pack);
         fclose($sock);
+        sleep(1);
 }
 
 function parse($url){
