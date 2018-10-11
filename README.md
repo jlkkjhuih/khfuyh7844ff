@@ -14,7 +14,7 @@ $timeToStop = $timeNow + $secondsToRun;
 while(1)
 {
         $timeNow = strtotime('now');
-        if ($timeNow >= $timeToStop))
+        if ($timeNow >= $timeToStop)
                 break;
                 
         $sock = fsockopen($host, 80);
